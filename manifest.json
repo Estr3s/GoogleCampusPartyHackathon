@@ -1,0 +1,22 @@
+{
+	"name": "KillBanner",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Save ink from your printer removing that banners that don't need be printed",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+    	"tabs",
+		"*://*/*",
+		"background"
+	],
+	"browser_action": {
+    	"default_icon": "iconaDeshabilitada.png"
+	},
+	"content_scripts": [{
+		"matches": ["*://*/*"],
+		"js": ["background.js"],
+		"all_frames": true
+    }]
+}
